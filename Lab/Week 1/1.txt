@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class test
+{
+    public static void main(String[] args)
+    {
+        Scanner myInput = new Scanner(System.in);
+        System.out.println("Enter first number: ");
+        int firstNumber = myInput.nextInt();
+        System.out.println("Enter second number: ");
+        int secondNumber = myInput.nextInt();
+        int temp;
+        while (secondNumber != 0)
+        {
+            temp = secondNumber;
+            secondNumber = firstNumber % secondNumber;
+            firstNumber = temp;
+        }
+        if(firstNumber == 1)
+            System.out.println("Don't have any common divisor");
+        else
+            System.out.println("The common divisor of entered numbers is: " + firstNumber);
+    }
+}
